@@ -53,9 +53,13 @@ a {
 }
 
 header{
-    height: 100vh;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
     color: var(--color-white);
     overflow: hidden;
+    @media screen and (min-width: 600px) {
+        height: 100vh !important;
+    }
 }
 
 section {
@@ -64,7 +68,7 @@ section {
     position: abolute;
     left: 0;
     top: 0;
-    padding: 3rem 18rem;
+    padding: 3rem 12rem !important;
 }
 
 .section {
@@ -670,6 +674,8 @@ section {
         z-index: -1;
         transform: translate(-50%, -50%);
         font-weight: 800;
-        font-size: 6.3rem;
+        font-size: 5rem;
     }
 }
+
+@import './media';
