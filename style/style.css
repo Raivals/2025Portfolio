@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -629,6 +630,76 @@ section {
 .contact-content-con .right-contact .submit-btn {
   display: flex;
   justify-content: flex-start;
+}
+
+/* Style du pop-up */
+.popup {
+  display: none; /* Le pop-up est caché par défaut */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Fond semi-transparent */
+  z-index: 9999; /* S'assurer que le pop-up soit au-dessus de tout le contenu */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenu du pop-up */
+.popup-content {
+  position: fixed; /* Position fixe par rapport à l'écran */
+  top: 50%; /* Positionner à 50% de la hauteur de l'écran */
+  left: 50%; /* Positionner à 50% de la largeur de l'écran */
+  transform: translate(-50%, -50%); /* Décaler de 50% de la largeur et hauteur pour centrer */
+  background-color: var(--color-primary); /* Fond sombre semi-transparent */
+  width: 80%; /* Largeur du pop-up */
+  max-width: 900px; /* Largeur maximale du pop-up */
+  max-height: 80vh; /* Hauteur maximale (80% de la hauteur de l'écran) */
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1000; /* S'assurer que le pop-up est au-dessus des autres éléments */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  overflow-y: auto; /* Permet le défilement vertical si nécessaire */
+}
+
+/* Animation d'apparition du pop-up */
+@keyframes popupAnim {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Bouton de fermeture du pop-up */
+.close-btn {
+  position: absolute; /* Position absolue par rapport au pop-up */
+  top: 10px; /* Espacement du haut */
+  right: 10px; /* Espacement de la droite */
+  font-size: 30px;
+  color: var(--color-white); /* Couleur de la croix */
+  cursor: pointer;
+  z-index: 1001; /* S'assurer qu'il est au-dessus du contenu du pop-up */
+}
+
+/* Style pour les titres et le texte */
+.popup h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.popup p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Style pour les images (mockups) */
+#popup-mockups img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
 }
 
 /*Independent components*/

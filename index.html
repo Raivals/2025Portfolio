@@ -249,8 +249,16 @@
                             <a href="https://www.bijouterie-julian.com/" target="_blank" class="icon">
                                 <i class="fa-solid fa-globe"></i>
                             </a>
-                            <a href="#" target="_blank" class="icon"> 
-                                <i class="fa-solid fa-magnifying-glass "></i>
+                            <a href="#" class="icon" 
+                                onclick="openPopup(
+                                    'Louis Julian', 
+                                    'Création d\'un site e-commerce pour une bijouterie.', 
+                                    'HTML, CSS, JavaScript, PHP', 
+                                    './img/mockup-lj-desktop.png', 
+                                    'C’était un projet intéressant qui a permis de créer une expérience utilisateur simple et efficace.'
+                                )"
+                            >
+                                <i class="fa-solid fa-magnifying-glass"></i>
                             </a>
                         </div>
                     </div>
@@ -265,8 +273,16 @@
                             <a href="https://www.planetygo.fr/" target="_blank" class="icon">
                                 <i class="fa-solid fa-globe"></i>
                             </a>
-                            <a href="#" target="_blank" class="icon"> 
-                                <i class="fa-solid fa-magnifying-glass "></i>
+                            <a href="#" class="icon" 
+                                onclick="openPopup(
+                                    'Planet Ygo', 
+                                    'Création d\'un site vitrine pour un influenceur Yu-gi-Oh!.', 
+                                    'CMS WiX', 
+                                    './img/mockup-planet-desktop.png', 
+                                    'C’était un projet intéressant qui a permis de découvrir l\'utilisation des CMS.'
+                                )"
+                            >
+                                <i class="fa-solid fa-magnifying-glass"></i>
                             </a>
                         </div>
                     </div>
@@ -281,8 +297,16 @@
                             <a href="https://pilot-in-test.vercel.app/#!" target="_blank" class="icon">
                                 <i class="fa-solid fa-globe"></i>
                             </a>
-                            <a href="#" target="_blank" class="icon"> 
-                                <i class="fa-solid fa-magnifying-glass "></i>
+                            <a href="#" class="icon" 
+                                onclick="openPopup(
+                                    'Pilot\'in', 
+                                    'Test technique à réalisé en 4h pour un entretien d\'embauche Chez pilot\'in. Une agence web Lyonnaise.', 
+                                    'HTML, CSS, JavaScript', 
+                                    './img/mockup-pilotin-desktop.png', 
+                                    'C\’était un projet intéressant par rapport à un test technique codingame lambda. Cela m\'a permis d\'apprendre a coder sous pression.'
+                                )"
+                            >
+                                <i class="fa-solid fa-magnifying-glass"></i>
                             </a>
                         </div>
                     </div>
@@ -297,8 +321,16 @@
                             <a href="https://www.lexpert-fenetre-54.com/" target="_blank" class="icon">
                                 <i class="fa-solid fa-globe"></i>
                             </a>
-                            <a href="#" target="_blank" class="icon"> 
-                                <i class="fa-solid fa-magnifying-glass "></i>
+                            <a href="#" class="icon" 
+                                onclick="openPopup(
+                                    'L\'Expert Fenêtre', 
+                                    'J\'ai réalisé mon alternance chez L\'Expert Fenêtre (entreprise spécialisée dans la vente et la pose de menuiseries) en tant que web designer / community manager. J\'ai appris à utiliser la suite adobe pour réaliser des visuels/vidéos ... ', 
+                                    'Suite Adobe, Notion, Meta Business, Espace pro fournisseurs', 
+                                    './img/mockup-expertfen-desktop.png', 
+                                    'L\'alternance a été une expérience très enrichissante. J\'ai appris énormément au niveau design et UI UX ce que va me permettre de développer un sens du design et le l\'interface bien plus aiguisé.'
+                                )"
+                            >
+                                <i class="fa-solid fa-magnifying-glass"></i>
                             </a>
                         </div>
                     </div>
@@ -310,8 +342,16 @@
                     <div class="hover-items">
                         <h3>Top ou flop</h3>
                         <div class="icons">
-                            <a href="#" target="_blank" class="icon"> 
-                                <i class="fa-solid fa-magnifying-glass "></i>
+                            <a href="#" class="icon" 
+                                onclick="openPopup(
+                                    'Top ou flop', 
+                                    'Projet podcast d\'une quizaine de minutes réalisé au sein de My Digital School. Le sujet était Le chat by Mistral.', 
+                                    'Première pro & After Effect', 
+                                    './img/mockup-topouflop-desktop.png', 
+                                    'Une expérience très enrichissante, qui m\'a permis de découvrir l\'IA mistral et de développer mes compétences de montage vidéo & animation'
+                                )"
+                            >
+                                <i class="fa-solid fa-magnifying-glass"></i>
                             </a>
                         </div>
                     </div>
@@ -326,8 +366,16 @@
                             <a href="#" target="_blank" class="icon">
                                 <i class="fa-solid fa-globe"></i>
                             </a>
-                            <a href="#" target="_blank" class="icon"> 
-                                <i class="fa-solid fa-magnifying-glass "></i>
+                            <a href="#" class="icon" 
+                                onclick="openPopup(
+                                    'Les audacieuses', 
+                                    'Réalisation d\'un projet pour une cliente', 
+                                    'Figma, Wordpress-Elementor', 
+                                    './img/mockup-topouflop-desktop.png', 
+                                    'Concevoir et réaliser un projet pour une cliente en tant qu\'UX Designer et une expérience très différente de mon expérience de développeur web. Très enrichissant et intéréssant. Le projet a été réalisé en parrallèle de mon alternance.'
+                                )"
+                            >
+                                <i class="fa-solid fa-magnifying-glass"></i>
                             </a>
                         </div>
                     </div>
@@ -379,8 +427,40 @@
     <div class="theme-btn">
         <i class="fas fa-adjust"></i>
     </div>
+        <div id="project-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2 id="popup-title"></h2>
+            <p id="popup-mission"></p>
+            <p id="popup-technologies"></p>
+            <div id="popup-mockups"></div>
+            <p id="popup-sentiment"></p>
+        </div>
+    </div>
+    
 
     <script src="./app.js"></script>
+    <script>
+        function openPopup(title, mission, technologies, mockups, sentiment) {
+            // Mettre à jour les éléments du pop-up avec les données du projet
+            document.getElementById("popup-title").innerText = title;
+            document.getElementById("popup-mission").innerText = "Mission: " + mission;
+            document.getElementById("popup-technologies").innerText = "Technologies utilisées: " + technologies;
+            
+            // Ajouter l'image du mockup si elle est présente
+            document.getElementById("popup-mockups").innerHTML = `<img src="${mockups}" alt="Mockup">`;
+            
+            document.getElementById("popup-sentiment").innerText = "Ressenti: " + sentiment;
+
+            // Afficher le pop-up
+            document.getElementById("project-popup").style.display = "block";
+        }
+
+        // Fermer le pop-up
+        function closePopup() {
+            document.getElementById("project-popup").style.display = "none";
+        }
+    </script>
 </body>
 
 </html>
